@@ -34,7 +34,7 @@ const cards: Card[] = [
 
 export default function CardSection() {
   return (
-    <section className="bg-[#F2F2F2] py-16">
+    <section className=" py-16">
       <PageContainer className="flex flex-col gap-8 md:flex-row">
         {cards.map((card) => (
           <article

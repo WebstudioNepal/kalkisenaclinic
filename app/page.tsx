@@ -1,5 +1,6 @@
 import CardSection from "@/components/CardSection";
 import HeroSection from "@/components/HeroSection";
+import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import MissionVisionSection from "@/components/MissionVisionSection";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <CardSection />
       <MissionVisionSection />
+      <MeetOurTeamSection />
     </div>
   );
 }

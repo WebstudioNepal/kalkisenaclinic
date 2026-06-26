@@ -7,7 +7,7 @@ import MissionTabs from "@/components/mission-vision/MissionTabs";
 import OurMissionPanel from "@/components/mission-vision/OurMissionPanel";
 import OurVisionPanel from "@/components/mission-vision/OurVisionPanel";
 import WhoWeArePanel from "@/components/mission-vision/WhoWeArePanel";
-import { type TabId } from "@/data/missionVision";
+import { MISSION_VISION_PANEL_MIN_HEIGHT, type TabId } from "@/data/missionVision";
 
 const panelTransition = { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const };
 
@@ -32,13 +32,14 @@ export default function MissionVisionSection() {
         <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:gap-16">
           <MissionTabs activeTab={activeTab} onChange={setActiveTab} />
 
-          <div className="min-w-0 flex-1">
+          <div className={`min-w-0 flex-1 ${MISSION_VISION_PANEL_MIN_HEIGHT}`}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
                 role="tabpanel"
                 id={`mission-panel-${activeTab}`}
                 aria-labelledby={`mission-tab-${activeTab}`}
+                className="h-full w-full"
                 {...panelMotionProps}
               >
                 {activeTab === "who-we-are" && <WhoWeArePanel />}

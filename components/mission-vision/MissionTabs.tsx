@@ -56,7 +56,7 @@ export default function MissionTabs({ activeTab, onChange }: MissionTabsProps) {
             <AppIcon
               icon={isActive ? "mdi:chevron-right" : "mdi:chevron-down"}
               width={16}
-              height={isActive ? 32 : 20}
+              height={isActive ? 42 : 30}
               className="shrink-0 text-black"
               aria-hidden
             />
