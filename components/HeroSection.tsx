@@ -31,7 +31,7 @@ export default function HeroSection({
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30" />
 
         <PageContainer className="relative flex h-full flex-col pt-[41px]">
-          <div className="flex justify-center">
+          <div className="w-full">
             <Navbar variant={navbarVariant ?? "dark"} logoHref="/" />
           </div>
 
@@ -53,7 +53,7 @@ export default function HeroSection({
       <div className="pointer-events-none absolute left-[1196px] top-[155px] hidden h-[161px] w-[161px] rounded-full bg-white/10 xl:block" />
 
       <PageContainer className="relative pt-[41px]">
-        <div className="flex justify-center">
+        <div className="w-full">
           <Navbar />
         </div>
 

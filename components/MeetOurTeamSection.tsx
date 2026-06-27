@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import PageContainer from "@/components/PageContainer";
 import { Button } from "@/components/ui/button";
@@ -8,6 +11,8 @@ type MeetOurTeamSectionProps = {
 };
 
 export default function MeetOurTeamSection({ id }: MeetOurTeamSectionProps) {
+  const [selectedMemberId, setSelectedMemberId] = useState<string | null>(null);
+
   return (
     <section id={id} className="scroll-mt-8 bg-white py-8">
       <PageContainer>
@@ -33,16 +38,28 @@ export default function MeetOurTeamSection({ id }: MeetOurTeamSectionProps) {
         </div>
 
         <div className="mt-12 flex flex-wrap items-start justify-center gap-8 xl:justify-between">
-          {meetOurTeamMembers.map((member) => (
-            <Image
-              key={member.id}
-              src={member.image}
-              alt={member.imageAlt}
-              width={292}
-              height={379}
-              className="h-auto w-[292px] shrink-0"
-            />
-          ))}
+          {meetOurTeamMembers.map((member) => {
+            const isSelected = selectedMemberId === member.id;
+
+            return (
+              <button
+                key={member.id}
+                type="button"
+                aria-pressed={isSelected}
+                aria-label={member.imageAlt}
+                onClick={() => setSelectedMemberId(isSelected ? null : member.id)}
+                className="cursor-pointer border-0 bg-transparent p-0"
+              >
+                <Image
+                  src={isSelected ? member.imageClicked : member.imageNotClicked}
+                  alt={member.imageAlt}
+                  width={292}
+                  height={379}
+                  className="h-auto w-[292px] shrink-0"
+                />
+              </button>
+            );
+          })}
         </div>
       </PageContainer>
     </section>

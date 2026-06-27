@@ -21,7 +21,7 @@ export default function ContactUsSection() {
       <div className="pointer-events-none absolute left-[1196px] top-[155px] hidden h-[161px] w-[161px] rounded-full bg-white/10 xl:block" />
 
       <PageContainer className="relative z-10 pt-[41px]">
-        <div className="flex justify-center">
+        <div className="w-full">
           <Navbar variant="dark" logoHref="/" />
         </div>
 

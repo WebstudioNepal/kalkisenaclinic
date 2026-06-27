@@ -1,28 +1,33 @@
 export type MeetOurTeamMember = {
   id: string;
-  image: string;
+  imageNotClicked: string;
+  imageClicked: string;
   imageAlt: string;
 };
 
 export const meetOurTeamMembers: MeetOurTeamMember[] = [
   {
     id: "jay-sah",
-    image: "/images/jay-shah.png",
+    imageNotClicked: "/images/our-meet/notclicked/01js.png",
+    imageClicked: "/images/our-meet/onclicked/01js.png",
     imageAlt: "Kalki Jay Sah",
   },
   {
     id: "uma-prasad-chairman",
-    image: "/images/druma.png",
+    imageNotClicked: "/images/our-meet/notclicked/02druma.png",
+    imageClicked: "/images/our-meet/onclicked/02usp.png",
     imageAlt: "Dr Uma Shankar Prasad, Chairman",
   },
   {
     id: "uma-prasad-ceo",
-    image: "/images/drumashankarprasad.png",
+    imageNotClicked: "/images/our-meet/notclicked/03drumashankarprasad.png",
+    imageClicked: "/images/our-meet/onclicked/03usp.png",
     imageAlt: "Dr Uma Shankar Prasad, Chief Executive Officer",
   },
   {
     id: "shishir-thapa",
-    image: "/images/shisir-thapa.png",
+    imageNotClicked: "/images/our-meet/notclicked/04shisir-thapa.png",
+    imageClicked: "/images/our-meet/onclicked/04st.png",
     imageAlt: "Shishir Thapa, Head of Department",
   },
 ];
