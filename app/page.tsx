@@ -6,6 +6,7 @@ import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import MissionVisionSection from "@/components/MissionVisionSection";
 import PerksBenefitsSection from "@/components/PerksBenefitsSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
+import WhyDonateSection from "@/components/WhyDonateSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <WhatWeDoSection />
       <LodgingPartnersSection />
       <PerksBenefitsSection />
+      <WhyDonateSection />
     </div>
   );
 }
