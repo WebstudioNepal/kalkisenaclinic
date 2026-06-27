@@ -1,6 +1,7 @@
 import AppIcon from "@/components/Icon";
 import Navbar from "@/components/Navbar";
 import PageContainer from "@/components/PageContainer";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
@@ -46,12 +47,9 @@ export default function HeroSection() {
 
             <span className="mr-3 hidden shrink-0 text-base text-black/40 sm:inline">Km radius</span>
 
-            <button
-              type="button"
-              className="h-[51px] shrink-0 rounded-lg bg-[#002CCC] px-6 text-base font-medium text-white transition hover:bg-[#0024b3]"
-            >
+            <Button className="h-[51px] shrink-0 px-6 text-base font-medium hover:bg-[#0024b3]">
               Find Now
-            </button>
+            </Button>
           </div>
 
           <p className="mt-9 max-w-[947px] text-base leading-normal">

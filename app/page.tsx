@@ -1,7 +1,11 @@
 import CardSection from "@/components/CardSection";
+import GeoCentersSection from "@/components/GeoCentersSection";
 import HeroSection from "@/components/HeroSection";
+import LodgingPartnersSection from "@/components/LodgingPartnersSection";
 import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import MissionVisionSection from "@/components/MissionVisionSection";
+import PerksBenefitsSection from "@/components/PerksBenefitsSection";
+import WhatWeDoSection from "@/components/WhatWeDoSection";
 
 export default function Home() {
   return (
@@ -10,6 +14,10 @@ export default function Home() {
       <CardSection />
       <MissionVisionSection />
       <MeetOurTeamSection />
+      <GeoCentersSection />
+      <WhatWeDoSection />
+      <LodgingPartnersSection />
+      <PerksBenefitsSection />
     </div>
   );
 }

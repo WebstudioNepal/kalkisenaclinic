@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 const navItems = ["Who We Are", "What We Do", "Our Impact", "Get Involved", "Contact Us"];
 
@@ -28,18 +29,12 @@ export default function Navbar() {
       </ul>
 
       <div className="flex items-center gap-3">
-        <button
-          type="button"
-          className="rounded-lg bg-black/[0.04] px-6 py-3 text-base font-medium text-black transition hover:bg-black/[0.08]"
-        >
+        <Button variant="secondary" className="h-[51px] px-6 text-base font-medium">
           Login
-        </button>
-        <button
-          type="button"
-          className="rounded-lg border border-black bg-black/[0.04] px-6 py-3 text-base font-medium text-black transition hover:bg-black/[0.08]"
-        >
+        </Button>
+        <Button variant="outline" className="h-[51px] border-black px-6 text-base font-medium">
           Donate Now
-        </button>
+        </Button>
       </div>
     </nav>
   );

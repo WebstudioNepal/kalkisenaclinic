@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { MISSION_VISION_PANEL_MIN_HEIGHT, staticQuote, teamMembers, whoWeAreParagraphs } from "@/data/missionVision";
+import { Button } from "@/components/ui/button";
 
 const ROTATE_INTERVAL_MS = 5000;
 const fadeTransition = { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const };

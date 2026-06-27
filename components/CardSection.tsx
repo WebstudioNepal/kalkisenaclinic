@@ -1,5 +1,6 @@
 import Image from "next/image";
 import PageContainer from "@/components/PageContainer";
+import { Button } from "@/components/ui/button";
 
 type Card = {
   title: string;
@@ -46,12 +47,12 @@ export default function CardSection() {
             <div className="relative flex h-full flex-col px-6 pb-6 pt-8 text-white">
               <h3 className="font-heading text-[50px] leading-none">{card.title}</h3>
               <p className="mt-[9px] max-w-[304px] text-base leading-normal">{card.description}</p>
-              <button
-                type="button"
-                className="absolute bottom-10 right-6 h-[51px] w-fit rounded-lg border border-white bg-white/20 px-6 text-base font-medium backdrop-blur-[57px] transition hover:bg-white/30"
+              <Button
+                variant="outline"
+                className="absolute bottom-10 right-6 h-[51px] border-white bg-white/20 px-6 text-base font-medium text-white backdrop-blur-[57px] hover:bg-white/30 hover:text-white"
               >
                 Learn More
-              </button>
+              </Button>
             </div>
           </article>
         ))}
