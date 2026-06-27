@@ -2,7 +2,7 @@ import WhyDonateContent from "@/components/why-donate/WhyDonateContent";
 
 export default function WhyDonateSection() {
   return (
-    <section className="relative overflow-hidden bg-[#00176A] py-8">
+    <section className="relative overflow-hidden bg-[#00176A] py-6">
       <div
         className="pointer-events-none absolute inset-0"
         aria-hidden

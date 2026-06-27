@@ -8,6 +8,7 @@ import PerksBenefitsSection from "@/components/PerksBenefitsSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
 import DonateTodaySection from "@/components/DonateTodaySection";
 import FooterSection from "@/components/FooterSection";
+import GetInTouchSection from "@/components/GetInTouchSection";
 import NewsletterSection from "@/components/NewsletterSection";
 import SocialPlatformsSection from "@/components/SocialPlatformsSection";
 import WhyDonateSection from "@/components/WhyDonateSection";
@@ -27,6 +28,7 @@ export default function Home() {
       <DonateTodaySection />
       <SocialPlatformsSection />
       <NewsletterSection />
+      <GetInTouchSection />
       <FooterSection />
     </div>
   );

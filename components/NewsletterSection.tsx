@@ -8,7 +8,7 @@ import {
 
 export default function NewsletterSection() {
   return (
-    <section className="relative overflow-hidden rounded-t-[24px] bg-[#002CCC] py-12 sm:py-16">
+    <section className="relative overflow-hidden rounded-t-[24px] bg-[#002CCC] py-8 sm:py-10">
       <AppIcon
         icon="mdi:star-four-points"
         width={300}

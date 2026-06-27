@@ -25,7 +25,7 @@ export default function MissionVisionSection() {
       };
 
   return (
-    <section id="who-we-are" className="scroll-mt-8 bg-white py-16">
+    <section id="who-we-are" className="scroll-mt-8 bg-white py-8">
       <PageContainer>
         <h2 className="font-heading text-[62px] leading-none text-black">Our Mission & Visions</h2>
 

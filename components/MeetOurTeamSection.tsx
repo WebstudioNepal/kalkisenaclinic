@@ -3,9 +3,13 @@ import PageContainer from "@/components/PageContainer";
 import { Button } from "@/components/ui/button";
 import { meetOurTeamMembers } from "@/data/meetOurTeam";
 
-export default function MeetOurTeamSection() {
+type MeetOurTeamSectionProps = {
+  id?: string;
+};
+
+export default function MeetOurTeamSection({ id }: MeetOurTeamSectionProps) {
   return (
-    <section className="bg-white py-16">
+    <section id={id} className="scroll-mt-8 bg-white py-8">
       <PageContainer>
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-4">

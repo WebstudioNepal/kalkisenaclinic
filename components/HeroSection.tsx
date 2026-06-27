@@ -1,9 +1,48 @@
 import AppIcon from "@/components/Icon";
-import Navbar from "@/components/Navbar";
+import Navbar, { type NavbarProps } from "@/components/Navbar";
 import PageContainer from "@/components/PageContainer";
 import { Button } from "@/components/ui/button";
 
-export default function HeroSection() {
+const ABOUT_HERO_VIDEO_SRC = "/video/about-us-hero.mp4";
+
+export type HeroSectionProps = {
+  variant?: "home" | "about";
+  navbarVariant?: NavbarProps["variant"];
+};
+
+export default function HeroSection({
+  variant = "home",
+  navbarVariant,
+}: HeroSectionProps) {
+  if (variant === "about") {
+    return (
+      <section id="hero" className="relative h-[810px] w-full overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-[810px] w-full object-cover opacity-100"
+          aria-hidden
+        >
+          <source src={ABOUT_HERO_VIDEO_SRC} type="video/mp4" />
+        </video>
+
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30" />
+
+        <PageContainer className="relative flex h-full flex-col pt-[41px]">
+          <div className="flex justify-center">
+            <Navbar variant={navbarVariant ?? "dark"} logoHref="/" />
+          </div>
+
+          <div className="flex flex-1 items-end justify-center pb-[200px] text-center text-white sm:pb-[220px]">
+            <h1 className="font-heading text-[62px] leading-none">About Us</h1>
+          </div>
+        </PageContainer>
+      </section>
+    );
+  }
+
   return (
     <section id="hero" className="relative overflow-hidden bg-[#00176A] pb-[130px]">
       <div className="pointer-events-none absolute left-[-189px] top-[269px] h-[743px] w-[743px] rounded-full bg-black opacity-30" />

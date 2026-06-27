@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { MISSION_VISION_PANEL_MIN_HEIGHT, staticQuote, teamMembers, whoWeAreParagraphs } from "@/data/missionVision";
-import { Button } from "@/components/ui/button";
 
 const ROTATE_INTERVAL_MS = 5000;
 const fadeTransition = { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const };
@@ -57,12 +57,12 @@ export default function WhoWeArePanel() {
           ))}
         </div>
 
-        <button
-          type="button"
-          className="mt-5 h-[51px] w-fit rounded-lg border border-black/30 px-6 text-base font-medium text-black transition hover:bg-black/[0.04]"
+        <Link
+          href="/about"
+          className="mt-5 inline-flex h-[51px] w-fit items-center rounded-lg border border-black/30 px-6 text-base font-medium text-black transition hover:bg-black/[0.04]"
         >
           Know More
-        </button>
+        </Link>
 
         <p className="font-heading mt-auto pt-6 text-[36px] italic leading-snug text-black/70 lg:pt-8">
           &ldquo;{staticQuote}&rdquo;

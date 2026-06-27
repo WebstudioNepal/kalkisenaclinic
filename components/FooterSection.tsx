@@ -16,9 +16,11 @@ import {
 export default function FooterSection() {
   return (
     <div className="bg-[#002CCC]">
-      <footer id="contact-us" className="scroll-mt-8 overflow-hidden rounded-t-[24px]">
-        <div className="h-1 rounded-t-[24px] bg-[#00C918]" aria-hidden />
-        <div className="bg-[#00176A] pb-12 pt-10 text-white sm:pb-16 sm:pt-12">
+      <footer
+        id="contact-us"
+        className="scroll-mt-8 overflow-hidden rounded-t-[24px] border-t-6 border-[#00C918]"
+      >
+        <div className="bg-[#00176A] pb-8 pt-6 text-white sm:pb-10 sm:pt-8">
           <PageContainer>
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
               <div>

@@ -5,11 +5,27 @@ import {
   heroNavHref,
   primaryNavItems,
 } from "@/data/navigation";
+import { cn } from "@/lib/utils";
 
-export default function Navbar() {
+export type NavbarProps = {
+  variant?: "light" | "dark";
+  logoHref?: string;
+};
+
+export default function Navbar({
+  variant = "light",
+  logoHref = heroNavHref,
+}: NavbarProps) {
+  const isDark = variant === "dark";
+
   return (
-    <nav className="inline-flex w-fit items-center gap-[72px] rounded-2xl bg-white px-5 py-2.5 backdrop-blur-[35px]">
-      <a href={heroNavHref} aria-label="Kalkisena Clinic home">
+    <nav
+      className={cn(
+        "inline-flex w-fit items-center gap-[72px] rounded-2xl px-5 py-2.5 backdrop-blur-[35px]",
+        isDark ? "bg-white/10" : "bg-white",
+      )}
+    >
+      <a href={logoHref} aria-label="Kalkisena Clinic home">
         <Image
           src="/images/logo-72e77c.png"
           alt="Kalkisena Clinic"
@@ -25,7 +41,12 @@ export default function Navbar() {
           <li key={item.id}>
             <a
               href={item.href}
-              className="block px-4 py-2.5 text-base font-normal text-black transition hover:text-[#002CCC]"
+              className={cn(
+                "block px-4 py-2.5 text-base font-normal transition",
+                isDark
+                  ? "text-white hover:text-white/80"
+                  : "text-black hover:text-[#002CCC]",
+              )}
             >
               {item.label}
             </a>
@@ -34,14 +55,25 @@ export default function Navbar() {
       </ul>
 
       <div className="flex items-center gap-3">
-        <Button variant="secondary" className="h-[51px] px-6 text-base font-medium">
+        <Button
+          variant={isDark ? "ghost" : "secondary"}
+          className={cn(
+            "h-[51px] px-6 text-base font-medium",
+            isDark && "text-white hover:bg-white/10 hover:text-white",
+          )}
+        >
           Login
         </Button>
         <a
           href={donateNavHref}
           className={buttonVariants({
             variant: "outline",
-            className: "h-[51px] border-black px-6 text-base font-medium",
+            className: cn(
+              "h-[51px] px-6 text-base font-medium",
+              isDark
+                ? "border-white text-white hover:bg-white/10 hover:text-white"
+                : "border-black",
+            ),
           })}
         >
           Donate Now

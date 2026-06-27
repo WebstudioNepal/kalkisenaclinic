@@ -2,7 +2,7 @@ import LodgingPartnersContent from "@/components/lodging-partners/LodgingPartner
 
 export default function LodgingPartnersSection() {
   return (
-    <section className="bg-white py-[60px]">
+    <section className="bg-white py-10">
       <LodgingPartnersContent />
     </section>
   );

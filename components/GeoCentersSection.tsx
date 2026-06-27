@@ -6,7 +6,7 @@ import { geoCountriesLeft, geoCountriesRight } from "@/data/geoCenters";
 
 export default function GeoCentersSection() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-8">
       <PageContainer>
         <h2 className="text-center font-heading text-[42px] leading-none text-black sm:text-[62px]">
           Our Centers through Geo Locations
