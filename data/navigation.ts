@@ -34,7 +34,7 @@ export const primaryNavItems = [
   {
     id: sectionIds.contactUs,
     label: "Contact Us",
-    href: `/#${sectionIds.contactUs}`,
+    href: "/contact",
   },
 ] as const;
 
@@ -62,5 +62,7 @@ export const footerQuickNavItems = [
 ] as const;
 
 export const donateNavHref = `/#${sectionIds.donateToday}`;
+
+export const contactNavHref = "/contact";
 
 export const heroNavHref = "/";
