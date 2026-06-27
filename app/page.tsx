@@ -6,6 +6,10 @@ import MeetOurTeamSection from "@/components/MeetOurTeamSection";
 import MissionVisionSection from "@/components/MissionVisionSection";
 import PerksBenefitsSection from "@/components/PerksBenefitsSection";
 import WhatWeDoSection from "@/components/WhatWeDoSection";
+import DonateTodaySection from "@/components/DonateTodaySection";
+import FooterSection from "@/components/FooterSection";
+import NewsletterSection from "@/components/NewsletterSection";
+import SocialPlatformsSection from "@/components/SocialPlatformsSection";
 import WhyDonateSection from "@/components/WhyDonateSection";
 
 export default function Home() {
@@ -20,6 +24,10 @@ export default function Home() {
       <LodgingPartnersSection />
       <PerksBenefitsSection />
       <WhyDonateSection />
+      <DonateTodaySection />
+      <SocialPlatformsSection />
+      <NewsletterSection />
+      <FooterSection />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { whatWeDoIntro, whatWeDoServices } from "@/data/whatWeDo";
 
 export default function WhatWeDoSection() {
   return (
-    <section className="relative overflow-x-hidden bg-white pb-0 pt-16">
+    <section id="what-we-do" className="relative scroll-mt-8 overflow-x-hidden bg-white pb-0 pt-16">
       <WhatWeDoDecor />
 
       <PageContainer className="relative z-10">
@@ -24,7 +24,7 @@ export default function WhatWeDoSection() {
         </div>
       </PageContainer>
 
-      <div className="relative z-10 mt-[60px] overflow-hidden">
+      <div id="our-impact" className="relative z-10 mt-[60px] scroll-mt-8 overflow-hidden">
         <ImpactStatsBar />
       </div>
     </section>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#00176A] pb-[130px]">
+    <section id="hero" className="relative overflow-hidden bg-[#00176A] pb-[130px]">
       <div className="pointer-events-none absolute left-[-189px] top-[269px] h-[743px] w-[743px] rounded-full bg-black opacity-30" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[318px] bg-gradient-to-b from-black/60 via-[rgba(0,23,106,0.3)] to-transparent" />
 

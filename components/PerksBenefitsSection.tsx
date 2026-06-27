@@ -11,7 +11,7 @@ import {
 
 export default function PerksBenefitsSection() {
   return (
-    <section className="bg-white py-16">
+    <section id="get-involved" className="scroll-mt-8 bg-white py-16">
       <PageContainer>
         <h2 className="font-heading text-[42px] leading-[1.05] text-black sm:text-[62px]">
           {perksBenefitsHeadingLines.map((line, index) => (
