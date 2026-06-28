@@ -2,7 +2,7 @@
 
 :root {
   /* Layout */
-  --page-max-width: 1440px;
+  --page-max-width: 1470px;
   --page-padding-x: 5%;
 
   /* Figma palette */
@@ -76,4 +76,3 @@ body {
   padding-inline: var(--page-padding-x);
   box-sizing: border-box;
 }
-
