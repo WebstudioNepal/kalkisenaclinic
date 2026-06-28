@@ -49,7 +49,7 @@ export default function AboutProfilePortrait({
 
   if (variant === "glow") {
     return (
-      <div className="relative mx-auto flex h-[300px] w-[300px] items-end justify-center sm:h-[340px] sm:w-[340px] lg:mx-0 lg:h-[380px] lg:w-[380px]">
+      <div className="relative mx-auto flex h-[300px] w-full max-w-[min(100%,300px)] items-end justify-center sm:h-[340px] sm:max-w-[340px] lg:mx-0 lg:h-[380px] lg:w-[380px] lg:max-w-none">
         <div
           className="pointer-events-none absolute inset-0 scale-105"
           aria-hidden

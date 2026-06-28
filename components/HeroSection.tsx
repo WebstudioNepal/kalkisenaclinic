@@ -16,13 +16,16 @@ export default function HeroSection({
 }: HeroSectionProps) {
   if (variant === "about") {
     return (
-      <section id="hero" className="relative h-[810px] w-full overflow-hidden">
+      <section
+        id="hero"
+        className="relative min-h-[420px] w-full overflow-hidden sm:min-h-[560px] lg:min-h-[810px]"
+      >
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 h-[810px] w-full object-cover opacity-100"
+          className="absolute inset-0 h-full min-h-[inherit] w-full object-cover opacity-100"
           aria-hidden
         >
           <source src={ABOUT_HERO_VIDEO_SRC} type="video/mp4" />
@@ -30,13 +33,15 @@ export default function HeroSection({
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30" />
 
-        <PageContainer className="relative flex h-full flex-col pt-[41px]">
+        <PageContainer className="relative flex min-h-[inherit] flex-col pt-[41px]">
           <div className="w-full">
             <Navbar variant={navbarVariant ?? "dark"} logoHref="/" />
           </div>
 
-          <div className="flex flex-1 items-end justify-center pb-[200px] text-center text-white sm:pb-[220px]">
-            <h1 className="font-heading text-[62px] leading-none">About Us</h1>
+          <div className="flex flex-1 items-end justify-center pb-16 text-center text-white sm:pb-24 lg:pb-[200px]">
+            <h1 className="font-heading text-[36px] leading-none sm:text-[48px] lg:text-[62px]">
+              About Us
+            </h1>
           </div>
         </PageContainer>
       </section>

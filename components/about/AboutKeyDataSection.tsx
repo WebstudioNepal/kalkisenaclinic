@@ -7,7 +7,7 @@ export default function AboutKeyDataSection() {
   return (
     <section id="key-data" className="scroll-mt-8 bg-white py-8 lg:py-14">
       <PageContainer>
-        <h2 className="text-center font-heading text-[42px] leading-[1.1] text-black sm:text-[48px] lg:text-[56px]">
+        <h2 className="text-center font-heading text-[32px] leading-[1.1] text-black sm:text-[42px] lg:text-[56px]">
           <span className="block">{aboutKeyDataContent.title}</span>
           <span className="block text-[#002CCC]">{aboutKeyDataContent.titleAccent}</span>
         </h2>
@@ -49,11 +49,11 @@ export default function AboutKeyDataSection() {
           </div>
         </div>
 
-        <h2 className="mt-12 text-center font-heading text-[42px] leading-none text-black sm:text-[48px] lg:mt-16 lg:text-[56px]">
+        <h2 className="mt-12 text-center font-heading text-[32px] leading-none text-black sm:text-[42px] lg:mt-16 lg:text-[56px]">
           {aboutFatalCrisisContent.title}
         </h2>
 
-        <div className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:mt-12 lg:grid-cols-5 lg:gap-8">
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:mt-12 lg:grid-cols-5 lg:gap-8">
           {aboutFatalCrisisContent.items.map((item) => (
             <AboutFatalCrisisIconCard key={item.id} item={item} />
           ))}

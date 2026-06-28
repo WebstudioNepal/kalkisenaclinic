@@ -18,7 +18,7 @@ export default function AboutVisionSection() {
 
       <PageContainer className="relative z-10">
         <div className="mx-auto flex max-w-[820px] flex-col items-center text-center">
-          <h2 className="font-heading text-[36px] leading-none text-white lg:text-[42px]">
+          <h2 className="font-heading text-[36px] leading-none text-white sm:text-[42px] lg:text-[50px]">
             {aboutVisionContent.title}
           </h2>
 
@@ -31,7 +31,7 @@ export default function AboutVisionSection() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 min-[640px]:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:gap-6 min-[640px]:grid-cols-2 xl:grid-cols-4 lg:mt-12">
           {aboutVisionCards.map((card) => (
             <AboutVisionCard key={card.id} card={card} />
           ))}

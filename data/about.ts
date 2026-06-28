@@ -216,19 +216,19 @@ export const aboutMissionCollageImages: AboutCollageImage[] = [
     src: "/images/about/surgical-scrubs.png",
     alt: "Medical professional in surgical scrubs",
     className:
-      "relative z-10 aspect-[195/350] w-[155px] shrink-0 -mr-2 translate-x-3 overflow-hidden rounded-[15px] lg:w-[175px] lg:-mr-2 lg:translate-x-4",
+      "relative z-10 aspect-[195/350] w-[110px] shrink-0 -mr-1 translate-x-2 overflow-hidden rounded-[15px] sm:w-[130px] sm:-mr-2 sm:translate-x-3 lg:w-[175px] lg:-mr-2 lg:translate-x-4",
   },
   {
     src: "/images/about/operating-room.png",
     alt: "Surgical team in operating room",
     className:
-      "relative z-30 aspect-[299/529] w-[230px] shrink-0 overflow-hidden rounded-[15px] lg:w-[268px]",
+      "relative z-30 aspect-[299/529] w-[165px] shrink-0 overflow-hidden rounded-[15px] sm:w-[195px] lg:w-[268px]",
   },
   {
     src: "/images/about/doctor-stethoscope.png",
     alt: "Doctor with stethoscope",
     className:
-      "relative z-10 aspect-[195/350] w-[155px] shrink-0 -ml-2 -translate-x-3 overflow-hidden rounded-[15px] lg:w-[175px] lg:-ml-2 lg:-translate-x-4",
+      "relative z-10 aspect-[195/350] w-[110px] shrink-0 -ml-1 -translate-x-2 overflow-hidden rounded-[15px] sm:w-[130px] sm:-ml-2 sm:-translate-x-3 lg:w-[175px] lg:-ml-2 lg:-translate-x-4",
   },
 ];
 

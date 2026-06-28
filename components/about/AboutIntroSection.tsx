@@ -4,10 +4,10 @@ import { aboutIntroCtaLabel, aboutIntroParagraphLines, aboutQuote } from "@/data
 
 export default function AboutIntroSection() {
   return (
-    <section id="about-intro" className="relative z-10 -mt-[100px] pb-8 sm:-mt-[160px]">
+    <section id="about-intro" className="relative z-10 -mt-12 pb-8 sm:-mt-20 lg:-mt-[160px]">
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6">
         <div
-          className="rounded-t-[32px] px-4 pt-8 pb-4 backdrop-blur-[20px] sm:px-8 sm:pt-10 sm:pb-6"
+          className="rounded-t-[24px] px-4 pt-6 pb-4 backdrop-blur-[20px] sm:rounded-t-[32px] sm:px-8 sm:pt-10 sm:pb-6"
           style={{
             background:
               "linear-gradient(180deg, rgba(242, 242, 242, 0.92) 0%, rgba(242, 242, 242, 0.88) 55%, rgba(255, 255, 255, 0) 100%)",
@@ -17,7 +17,7 @@ export default function AboutIntroSection() {
             {aboutIntroParagraphLines.map((line, index) => (
               <span key={line}>
                 {index > 0 && <br />}
-                <span className="inline-block sm:whitespace-nowrap">{line}</span>
+                <span className="inline-block">{line}</span>
               </span>
             ))}
           </p>
@@ -31,7 +31,7 @@ export default function AboutIntroSection() {
       </div>
 
       <PageContainer>
-        <p className="font-heading mx-auto max-w-[900px] bg-white pt-2 text-center text-[36px] italic leading-snug text-black/70 sm:pt-4">
+        <p className="font-heading mx-auto max-w-[900px] bg-white pt-2 text-center text-[28px] italic leading-snug text-black/70 sm:pt-4 sm:text-[32px] lg:text-[36px]">
           &ldquo;{aboutQuote}&rdquo;
         </p>
       </PageContainer>

@@ -28,7 +28,7 @@ export function AboutMeetUsDarkProfileContent({
       <h3
         className={cn(
           "font-medium leading-tight text-white",
-          founderCutout ? "text-[32px] lg:text-[40px]" : "text-[32px] lg:text-[36px]",
+          founderCutout ? "text-[28px] sm:text-[32px] lg:text-[40px]" : "text-[28px] sm:text-[32px] lg:text-[36px]",
         )}
       >
         {founderCutout ? `${profile.name} ( Founder)` : profile.name}
@@ -107,8 +107,8 @@ export default function AboutMeetUsDarkProfileBlock({
   return (
     <section
       className={cn(
-        "relative overflow-hidden bg-[#00176A]",
-        founderCutout ? "pt-10 lg:pt-16 pb-0" : "py-8 lg:py-14",
+        "relative overflow-x-hidden bg-[#00176A]",
+        founderCutout ? "pt-10 pb-6 lg:pt-16 lg:pb-0" : "py-8 lg:py-14",
       )}
     >
       {founderCutout ? (

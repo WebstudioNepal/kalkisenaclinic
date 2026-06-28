@@ -8,7 +8,7 @@ type AboutFatalCrisisIconCardProps = {
 export default function AboutFatalCrisisIconCard({ item }: AboutFatalCrisisIconCardProps) {
   return (
     <article className="flex flex-col items-center gap-4">
-      <div className="flex aspect-square w-full max-w-[140px] items-center justify-center rounded-2xl bg-[#F2F2F2]">
+      <div className="flex aspect-square w-full max-w-[120px] items-center justify-center rounded-2xl bg-[#F2F2F2] sm:max-w-[140px]">
         <Image
           src={item.icon}
           alt=""
@@ -18,7 +18,7 @@ export default function AboutFatalCrisisIconCard({ item }: AboutFatalCrisisIconC
           aria-hidden
         />
       </div>
-      <p className="text-center text-sm leading-normal text-black lg:text-base">{item.label}</p>
+      <p className="text-center text-xs leading-normal text-black sm:text-sm lg:text-base">{item.label}</p>
     </article>
   );
 }

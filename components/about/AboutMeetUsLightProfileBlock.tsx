@@ -13,7 +13,7 @@ export function AboutMeetUsLightProfileContent({ profile }: AboutMeetUsLightProf
   return (
     <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-12 xl:gap-16">
       <div className="min-w-0 flex-1 lg:max-w-[58%]">
-        <h3 className="text-[32px] font-medium leading-tight text-black lg:text-[36px]">
+        <h3 className="text-[28px] font-medium leading-tight text-black sm:text-[32px] lg:text-[36px]">
           {profile.name}
         </h3>
 
@@ -50,7 +50,7 @@ type AboutMeetUsLightProfileBlockProps = {
 
 export default function AboutMeetUsLightProfileBlock({ profile }: AboutMeetUsLightProfileBlockProps) {
   return (
-    <section className="relative overflow-hidden bg-white py-8 lg:py-14">
+    <section className="relative overflow-x-hidden bg-white py-8 lg:py-14">
       <div
         className="pointer-events-none absolute right-0 top-1/2 h-[min(580px,75vw)] w-[min(580px,75vw)] -translate-y-1/2 translate-x-[6%] lg:right-[4%] lg:h-[540px] lg:w-[540px] lg:translate-x-0"
         aria-hidden

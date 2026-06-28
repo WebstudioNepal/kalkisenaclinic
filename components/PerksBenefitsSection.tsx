@@ -48,7 +48,7 @@ export default function PerksBenefitsSection() {
             alt=""
             width={232}
             height={232}
-            className="pointer-events-none absolute bottom-0 right-0 z-0 h-auto w-[120px] object-contain opacity-100 sm:w-[160px] lg:bottom-auto lg:right-auto lg:left-[989px] lg:top-[251px] lg:w-[232px]"
+            className="pointer-events-none absolute bottom-0 right-0 z-0 hidden h-auto w-[120px] object-contain opacity-100 sm:block sm:w-[160px] lg:bottom-auto lg:right-auto lg:left-[989px] lg:top-[251px] lg:w-[232px]"
             aria-hidden
           />
         </div>
