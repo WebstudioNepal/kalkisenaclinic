@@ -22,7 +22,9 @@ export default function AboutMeetUsIntroBlock({ intro, profile }: AboutMeetUsInt
       <PageContainer className="relative z-10">
         <h2 className="font-heading text-[36px] leading-none text-black sm:text-[42px] lg:text-[50px]">Meet Us</h2>
 
-        <p className="mt-6 max-w-[620px] text-base leading-normal text-black/60">{intro[0]}</p>
+        <p className="mt-6 max-w-[900px] text-base leading-relaxed text-black/60 lg:max-w-[980px]">
+          {intro[0]}
+        </p>
 
         <div className="mt-12 lg:mt-14">
           <AboutMeetUsLightProfileContent profile={profile} />

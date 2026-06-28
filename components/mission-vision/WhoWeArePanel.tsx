@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { MISSION_VISION_PANEL_MIN_HEIGHT, staticQuote, teamMembers, whoWeAreParagraphs } from "@/data/missionVision";
 
-const ROTATE_INTERVAL_MS = 5000;
+const ROTATE_INTERVAL_MS = 2000;
 const fadeTransition = { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const };
 
 export default function WhoWeArePanel() {
@@ -27,20 +27,20 @@ export default function WhoWeArePanel() {
   const imageMotionProps = shouldReduceMotion
     ? { initial: false, animate: { opacity: 1, x: 0 }, exit: { opacity: 1, x: 0 } }
     : {
-        initial: { opacity: 0, x: 24 },
-        animate: { opacity: 1, x: 0 },
-        exit: { opacity: 0, x: -24 },
-        transition: fadeTransition,
-      };
+      initial: { opacity: 0, x: 24 },
+      animate: { opacity: 1, x: 0 },
+      exit: { opacity: 0, x: -24 },
+      transition: fadeTransition,
+    };
 
   const nameMotionProps = shouldReduceMotion
     ? { initial: false, animate: { opacity: 1, y: 0 }, exit: { opacity: 1, y: 0 } }
     : {
-        initial: { opacity: 0, y: 8 },
-        animate: { opacity: 1, y: 0 },
-        exit: { opacity: 0, y: -8 },
-        transition: fadeTransition,
-      };
+      initial: { opacity: 0, y: 8 },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: -8 },
+      transition: fadeTransition,
+    };
 
   return (
     <div
@@ -90,7 +90,7 @@ export default function WhoWeArePanel() {
             className="mt-6 flex items-baseline justify-start gap-2 text-left"
           >
             <span className="font-heading text-[26px] italic text-black/70">- by</span>
-            <span className="text-base font-medium text-[#002CCC]">
+            <span className="text-l font-medium leading-snug text-[#002CCC] sm:text-2xl">
               {member.displayName ?? member.name}
             </span>
           </motion.div>

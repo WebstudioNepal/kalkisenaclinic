@@ -13,20 +13,13 @@ type AboutSplitSectionProps = {
 };
 
 function ImageCollage({ images }: { images: AboutCollageImage[] }) {
+  const centerIndex = Math.floor(images.length / 2);
+
   return (
     <div className="relative mx-auto w-fit max-w-full lg:mx-0">
-      <div
-        className="pointer-events-none absolute -left-3 -top-3 h-14 w-14 border-l border-t border-[#002CCC]/35"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -bottom-3 -right-3 h-14 w-14 border-b border-r border-[#002CCC]/35"
-        aria-hidden
-      />
-
       <div className="flex items-center justify-center">
-        {images.map((image) => (
-          <div key={image.src} className={image.className}>
+        {images.map((image, index) => {
+          const imageElement = (
             <Image
               src={image.src}
               alt={image.alt}
@@ -34,8 +27,30 @@ function ImageCollage({ images }: { images: AboutCollageImage[] }) {
               className="object-cover"
               sizes="(min-width: 1024px) 268px, 33vw"
             />
-          </div>
-        ))}
+          );
+
+          if (index !== centerIndex) {
+            return (
+              <div key={image.src} className={image.className}>
+                {imageElement}
+              </div>
+            );
+          }
+
+          return (
+            <div key={image.src} className="relative shrink-0">
+              <div
+                className="pointer-events-none absolute -left-3 -top-3 z-40 h-14 w-14 rounded-tl-[12px] border-l-2 border-t-2 border-[#002CCC]/35"
+                aria-hidden
+              />
+              <div
+                className="pointer-events-none absolute -bottom-3 -right-3 z-40 h-14 w-14 rounded-br-[12px] border-b-2 border-r-2 border-[#002CCC]/35"
+                aria-hidden
+              />
+              <div className={image.className}>{imageElement}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
