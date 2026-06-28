@@ -1,9 +1,8 @@
 import AppIcon from "@/components/Icon";
+import AboutHeroVideo from "@/components/about/AboutHeroVideo";
 import Navbar, { type NavbarProps } from "@/components/Navbar";
 import PageContainer from "@/components/PageContainer";
 import { Button } from "@/components/ui/button";
-
-const ABOUT_HERO_VIDEO_SRC = "/video/about-us-hero.mp4";
 
 export type HeroSectionProps = {
   variant?: "home" | "about";
@@ -20,16 +19,7 @@ export default function HeroSection({
         id="hero"
         className="relative min-h-[420px] w-full overflow-hidden sm:min-h-[560px] lg:min-h-[810px]"
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full min-h-[inherit] w-full object-cover opacity-100"
-          aria-hidden
-        >
-          <source src={ABOUT_HERO_VIDEO_SRC} type="video/mp4" />
-        </video>
+        <AboutHeroVideo />
 
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/30" />
 

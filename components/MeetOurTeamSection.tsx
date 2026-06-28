@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { meetOurTeamMembers } from "@/data/meetOurTeam";
+import { cn } from "@/lib/utils";
 
 type MeetOurTeamSectionProps = {
   id?: string;
@@ -31,12 +33,15 @@ export default function MeetOurTeamSection({ id }: MeetOurTeamSectionProps) {
             />
           </div>
 
-          <Button
-            variant="outline"
-            className="h-[51px] w-fit self-start px-6 text-base font-medium text-black/60 hover:text-black sm:self-auto"
+          <Link
+            href="/about#meet-us"
+            className={cn(
+              buttonVariants({ variant: "outline" }),
+              "h-[51px] w-fit self-start px-6 text-base font-medium text-black/60 hover:text-black sm:self-auto",
+            )}
           >
             Know More
-          </Button>
+          </Link>
         </div>
 
         <div className="mt-6 grid grid-cols-2 place-items-center gap-4 sm:mt-12 sm:gap-6 md:gap-8 xl:flex xl:flex-wrap xl:items-start xl:justify-between">

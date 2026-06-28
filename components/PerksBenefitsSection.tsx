@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 import PerksBenefitsVisual from "@/components/perks-benefits/PerksBenefitsVisual";
 import {
@@ -35,12 +36,12 @@ export default function PerksBenefitsSection() {
               ))}
             </ul>
 
-            <button
-              type="button"
-              className="relative z-10 mt-8 h-[51px] w-fit rounded-lg border border-black/30 px-6 text-base font-medium text-black transition hover:bg-black/4"
+            <Link
+              href="/about#get-involved"
+              className="relative z-10 mt-8 inline-flex h-[51px] w-fit items-center rounded-lg border border-black/30 px-6 text-base font-medium text-black transition hover:bg-black/4"
             >
               {perksBenefitsCtaLabel}
-            </button>
+            </Link>
           </div>
 
           <Image

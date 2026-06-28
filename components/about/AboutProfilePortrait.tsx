@@ -7,6 +7,7 @@ type AboutProfilePortraitProps = {
   theme: "light" | "dark";
   variant?: "feathered" | "rectangular" | "glow" | "cutout";
   grayscale?: boolean;
+  size?: "default" | "compact";
 };
 
 export default function AboutProfilePortrait({
@@ -15,10 +16,20 @@ export default function AboutProfilePortrait({
   theme,
   variant = "feathered",
   grayscale = false,
+  size = "default",
 }: AboutProfilePortraitProps) {
+  const isCompact = size === "compact";
+
   if (variant === "cutout") {
     return (
-      <div className="relative mx-auto flex h-[320px] w-full max-w-[300px] items-end justify-center sm:h-[360px] sm:max-w-[340px] lg:mx-0 lg:h-[420px] lg:max-w-[360px]">
+      <div
+        className={cn(
+          "relative mx-auto flex w-full items-end justify-center",
+          isCompact
+            ? "h-[240px] max-w-[220px] sm:h-[260px] sm:max-w-[240px] lg:mx-0 lg:h-[300px] lg:max-w-[260px]"
+            : "h-[320px] max-w-[300px] sm:h-[360px] sm:max-w-[340px] lg:mx-0 lg:h-[420px] lg:max-w-[360px]",
+        )}
+      >
         <div className="relative h-full w-full">
           <Image
             src={src}
@@ -35,7 +46,14 @@ export default function AboutProfilePortrait({
 
   if (variant === "rectangular") {
     return (
-      <div className="relative mx-auto aspect-[4/5] w-[260px] max-w-full overflow-hidden sm:w-[280px] lg:mx-0 lg:w-full lg:max-w-[360px]">
+      <div
+        className={cn(
+          "relative mx-auto aspect-[4/5] max-w-full overflow-hidden",
+          isCompact
+            ? "w-[200px] sm:w-[220px] lg:mx-0 lg:w-full lg:max-w-[260px]"
+            : "w-[260px] sm:w-[280px] lg:mx-0 lg:w-full lg:max-w-[360px]",
+        )}
+      >
         <Image
           src={src}
           alt={alt}
@@ -49,7 +67,14 @@ export default function AboutProfilePortrait({
 
   if (variant === "glow") {
     return (
-      <div className="relative mx-auto flex h-[300px] w-full max-w-[min(100%,300px)] items-end justify-center sm:h-[340px] sm:max-w-[340px] lg:mx-0 lg:h-[380px] lg:w-[380px] lg:max-w-none">
+      <div
+        className={cn(
+          "relative mx-auto flex w-full items-end justify-center",
+          isCompact
+            ? "h-[220px] max-w-[min(100%,240px)] sm:h-[250px] sm:max-w-[260px] lg:mx-0 lg:h-[280px] lg:w-[280px] lg:max-w-none"
+            : "h-[300px] max-w-[min(100%,300px)] sm:h-[340px] sm:max-w-[340px] lg:mx-0 lg:h-[380px] lg:w-[380px] lg:max-w-none",
+        )}
+      >
         <div
           className="pointer-events-none absolute inset-0 scale-105"
           aria-hidden
@@ -76,7 +101,14 @@ export default function AboutProfilePortrait({
   }
 
   return (
-    <div className="relative mx-auto flex h-[340px] w-full max-w-[320px] items-center justify-center lg:mx-0 lg:h-[400px] lg:max-w-[360px]">
+    <div
+      className={cn(
+        "relative mx-auto flex w-full items-center justify-center",
+        isCompact
+          ? "h-[250px] max-w-[240px] lg:mx-0 lg:h-[300px] lg:max-w-[280px]"
+          : "h-[340px] max-w-[320px] lg:mx-0 lg:h-[400px] lg:max-w-[360px]",
+      )}
+    >
       {theme === "light" && (
         <div
           className="pointer-events-none absolute inset-0 scale-110"
@@ -91,7 +123,13 @@ export default function AboutProfilePortrait({
       <div
         className={cn(
           "relative h-full w-full",
-          theme === "light" ? "max-w-[280px] lg:max-w-[320px]" : "max-w-[300px] lg:max-w-[340px]",
+          theme === "light"
+            ? isCompact
+              ? "max-w-[220px] lg:max-w-[250px]"
+              : "max-w-[280px] lg:max-w-[320px]"
+            : isCompact
+              ? "max-w-[240px] lg:max-w-[280px]"
+              : "max-w-[300px] lg:max-w-[340px]",
         )}
         style={{
           WebkitMaskImage:

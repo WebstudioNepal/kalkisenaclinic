@@ -5,7 +5,7 @@ import { getInTouchHeading, getInTouchSubtext } from "@/data/getInTouch";
 
 export default function GetInTouchSection() {
   return (
-    <section className="relative overflow-hidden bg-[#002CCC] py-8 sm:py-10">
+    <section id="get-in-touch" className="scroll-mt-8 relative overflow-hidden bg-[#002CCC] py-8 sm:py-10">
       <Image
         src="/images/material-symbols_add.png"
         alt=""

@@ -1,6 +1,8 @@
+import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { aboutIntroCtaLabel, aboutIntroParagraphLines, aboutQuote } from "@/data/about";
+import { cn } from "@/lib/utils";
 
 export default function AboutIntroSection() {
   return (
@@ -23,9 +25,15 @@ export default function AboutIntroSection() {
           </p>
 
           <div className="mt-8 flex justify-center">
-            <Button className="h-[51px] rounded-lg bg-[#002CCC] px-8 text-base font-medium hover:bg-[#0024b3]">
+            <Link
+              href="#get-in-touch"
+              className={cn(
+                buttonVariants({ variant: "default" }),
+                "h-[51px] rounded-lg bg-[#002CCC] px-8 text-base font-medium hover:bg-[#0024b3]",
+              )}
+            >
               {aboutIntroCtaLabel}
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
