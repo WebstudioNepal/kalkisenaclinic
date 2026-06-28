@@ -40,12 +40,12 @@ export default function ImpactStatsBar() {
         alt=""
         width={BANNER_W}
         height={BANNER_H}
-        className="block h-auto w-full"
+        className="absolute inset-0 h-full w-full object-cover object-center sm:relative sm:block sm:h-auto sm:w-full"
         aria-hidden
         priority
       />
 
-      <div className="pointer-events-none absolute inset-0 overflow-visible" aria-hidden>
+      <div className="pointer-events-none absolute inset-0 overflow-visible max-sm:hidden" aria-hidden>
         {/* Figma: geo-green-leaf — bottom-left watermark */}
         <div
           className="absolute opacity-20 sm:opacity-30"
@@ -95,15 +95,17 @@ export default function ImpactStatsBar() {
         </div>
       </div>
 
-      {/* Stats content — inset to clear torn edges */}
-      <div className="absolute inset-0 z-10 flex items-center px-[5%] py-6 sm:py-10 lg:py-12">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4 xl:gap-10">
+      {/* Stats content — mobile: relative flow + 2-col grid; desktop: absolute overlay */}
+      <div className="relative z-10 px-[5%] py-8 sm:absolute sm:inset-0 sm:flex sm:items-center sm:py-10 lg:py-12">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-2 gap-x-4 gap-y-6 sm:gap-8 xl:grid-cols-4 xl:gap-10">
           {impactStats.map((stat) => (
             <div key={stat.label} className="text-center text-white">
-              <p className="font-heading text-[42px] leading-none sm:text-[50px] lg:text-[62px]">
+              <p className="font-heading text-[36px] leading-none sm:text-[50px] lg:text-[62px]">
                 {stat.value}
               </p>
-              <p className="mt-2 text-lg leading-normal sm:mt-3 sm:text-2xl">{stat.label}</p>
+              <p className="mt-1 text-sm leading-snug sm:mt-3 sm:text-2xl sm:leading-normal">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>

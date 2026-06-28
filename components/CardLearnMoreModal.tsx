@@ -44,7 +44,7 @@ export default function CardLearnMoreModal({ open, onClose }: CardLearnMoreModal
       role="presentation"
     >
       <div
-        className="relative w-full max-w-[592px]"
+        className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[480px]"
         role="dialog"
         aria-modal="true"
         aria-label="Download the Kalki Sena Super App"
@@ -55,7 +55,7 @@ export default function CardLearnMoreModal({ open, onClose }: CardLearnMoreModal
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-3 top-3 z-10 size-10 cursor-pointer opacity-0 sm:right-4 sm:top-4"
+          className="absolute right-2 top-2 z-10 size-8 cursor-pointer opacity-0 sm:right-3 sm:top-3 sm:size-9"
           aria-label="Close popup"
         />
 
