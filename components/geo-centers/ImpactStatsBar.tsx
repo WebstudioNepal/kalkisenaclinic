@@ -48,28 +48,33 @@ export default function ImpactStatsBar() {
       <div className="pointer-events-none absolute inset-0 overflow-visible" aria-hidden>
         {/* Figma: geo-green-leaf — bottom-left watermark */}
         <div
-          className="absolute"
+          className="absolute opacity-20 sm:opacity-30"
           style={{
             left: figmaPos(LEAF.left, "x"),
             top: figmaPos(LEAF.top, "y"),
             width: figmaPos(LEAF.width, "x"),
-            opacity: LEAF.opacity,
-            transform: `rotate(${LEAF.rotate}deg)`,
-            transformOrigin: "center center",
           }}
         >
-          <Image
-            src="/images/geo-green-leaf-3abbfb.png"
-            alt=""
-            width={LEAF.width}
-            height={LEAF.height}
-            className="h-auto w-full"
-          />
+          <div
+            className="max-sm:origin-bottom-left max-sm:scale-75"
+            style={{
+              transform: `rotate(${LEAF.rotate}deg)`,
+              transformOrigin: "center center",
+            }}
+          >
+            <Image
+              src="/images/geo-green-leaf-3abbfb.png"
+              alt=""
+              width={LEAF.width}
+              height={LEAF.height}
+              className="h-auto w-full"
+            />
+          </div>
         </div>
 
         {/* Figma: material-symbols:add — right watermark */}
         <div
-          className="absolute"
+          className="absolute hidden sm:block"
           style={{
             left: figmaPos(PLUS.left, "x"),
             top: figmaPos(PLUS.top, "y"),
@@ -91,12 +96,14 @@ export default function ImpactStatsBar() {
       </div>
 
       {/* Stats content — inset to clear torn edges */}
-      <div className="absolute inset-0 z-10 flex items-center px-[5%] py-10 sm:py-12">
-        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="absolute inset-0 z-10 flex items-center px-[5%] py-6 sm:py-10 lg:py-12">
+        <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 xl:grid-cols-4 xl:gap-10">
           {impactStats.map((stat) => (
             <div key={stat.label} className="text-center text-white">
-              <p className="font-heading text-[50px] leading-none sm:text-[62px]">{stat.value}</p>
-              <p className="mt-3 text-2xl leading-normal">{stat.label}</p>
+              <p className="font-heading text-[42px] leading-none sm:text-[50px] lg:text-[62px]">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-lg leading-normal sm:mt-3 sm:text-2xl">{stat.label}</p>
             </div>
           ))}
         </div>

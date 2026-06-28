@@ -5,7 +5,6 @@ export type TextPanelContent = {
   intro: string[];
   bullets: string[];
   quote: string;
-  backgroundImage: string;
   theme: "light" | "dark";
 };
 
@@ -70,7 +69,6 @@ export const missionPanel: TextPanelContent = {
     "Everyday, people throughout America struggle with choosing.",
   ],
   quote: staticQuote,
-  backgroundImage: "/images/mission-vision-mission-bg.svg",
   theme: "light",
 };
 
@@ -90,6 +88,5 @@ export const visionPanel: TextPanelContent = {
     "We champion healthcare advocacy that protects patient rights and expands access to essential services.",
   ],
   quote: staticQuote,
-  backgroundImage: "/images/mission-vision-mission-bg.svg",
   theme: "light",
 };

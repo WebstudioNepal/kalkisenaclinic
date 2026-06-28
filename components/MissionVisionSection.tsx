@@ -25,11 +25,13 @@ export default function MissionVisionSection() {
       };
 
   return (
-    <section id="who-we-are" className="scroll-mt-8 bg-white py-8">
+    <section id="who-we-are" className="scroll-mt-8 bg-white py-6 sm:py-8">
       <PageContainer>
-        <h2 className="font-heading text-[62px] leading-none text-black">Our Mission & Visions</h2>
+        <h2 className="font-heading text-[36px] leading-none text-black sm:text-[48px] lg:text-[62px]">
+          Our Mission & Visions
+        </h2>
 
-        <div className="mt-12 flex flex-col gap-10 lg:flex-row lg:gap-16">
+        <div className="mt-6 flex flex-col gap-4 lg:mt-12 lg:flex-row lg:gap-16">
           <MissionTabs activeTab={activeTab} onChange={setActiveTab} />
 
           <div className={`min-w-0 flex-1 ${MISSION_VISION_PANEL_MIN_HEIGHT}`}>

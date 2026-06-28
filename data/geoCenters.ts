@@ -45,6 +45,8 @@ export const geoCountriesRight: GeoCountry[] = [
   { id: "haiti", name: "Haiti" },
 ];
 
+export const geoCountries: GeoCountry[] = [...geoCountriesLeft, ...geoCountriesRight];
+
 export const impactStats: ImpactStat[] = [
   { value: "1400+", label: "Free Clinics" },
   { value: "1.2 M", label: "Patients Served Annually" },
